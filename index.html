@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROOTED — Rooted in the land. Raised on the work.</title>
+<meta name="description" content="ROOTED is a heritage apparel brand for the people who work the land. Launching soon.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --harvest:#C75B1D;
+  --field:#4A5D23;
+  --dusk:#232A33;
+  --cream:#F5F0E3;
+  --dusk-deep:#161B21;
+  --dusk-soft:#2C343E;
+  --cream-dim:rgba(245,240,227,.62);
+  --cream-faint:rgba(245,240,227,.34);
+  --line:rgba(245,240,227,.14);
+  --font-display:'Bitter',Georgia,serif;
+  --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --wrap:1180px;
+  --pad:clamp(1.25rem,5vw,3rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--dusk);color:var(--cream);line-height:1.65;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.wrap.narrow{max-width:720px}
+.center{text-align:center}
+.section{padding:clamp(4.5rem,11vw,9rem) 0}
+h1,h2,h3{font-family:var(--font-display);font-weight:900;line-height:1.06;letter-spacing:-.015em}
+h2{font-size:clamp(2rem,5.5vw,3.5rem);margin-bottom:1.4rem}
+h3{font-size:clamp(1.15rem,2.4vw,1.4rem);font-weight:700;margin-bottom:.5rem}
+.eyebrow{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--harvest);margin-bottom:1.1rem}
+.section-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--cream-dim);max-width:56ch;margin:0 auto 3rem}
+
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(35,42,51,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.wordmark{font-family:var(--font-display);font-weight:900;font-size:1.32rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cream)}
+.wordmark.small{font-size:1.05rem;letter-spacing:.2em}
+.nav{display:flex;align-items:center;gap:2rem}
+.nav a{font-size:.82rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--cream-dim);transition:color .22s ease}
+.nav a:hover{color:var(--cream)}
+.nav-cta{color:var(--harvest)!important;border:1px solid var(--harvest);padding:.5rem 1.05rem;border-radius:2px;transition:background .22s ease,color .22s ease}
+.nav-cta:hover{background:var(--harvest);color:var(--cream)!important}
+@media(max-width:760px){.nav a:not(.nav-cta){display:none}.nav{gap:0}}
+
+.btn{display:inline-block;font-family:var(--font-body);font-size:.82rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:1.05rem 2.3rem;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:transform .22s ease,background .22s ease,color .22s ease,border-color .22s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--harvest);color:var(--cream)}
+.btn-primary:hover{background:#d96a28}
+.btn-outline{border-color:var(--cream-faint);color:var(--cream)}
+.btn-outline:hover{border-color:var(--cream);background:rgba(245,240,227,.06)}
+
+.placeholder-img{position:relative;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,rgba(245,240,227,.035) 0px,rgba(245,240,227,.035) 1px,transparent 1px,transparent 11px),var(--dusk-soft);border:1px solid var(--line);overflow:hidden}
+.ph-label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-faint);text-align:center;line-height:1.9;padding:1rem}
+.ph-label small{display:block;font-size:.63rem;letter-spacing:.1em;text-transform:none;font-weight:400;opacity:.72;margin-top:.35rem}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:7rem 0 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;border:none;z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,27,33,.72) 0%,rgba(22,27,33,.88) 55%,var(--dusk) 100%)}
+.hero-inner{position:relative;z-index:1;width:100%;max-width:820px;margin:0 auto;padding:0 var(--pad)}
+.hero-wordmark{font-family:var(--font-display);font-weight:900;font-size:clamp(3.4rem,15vw,8.5rem);letter-spacing:.1em;line-height:.95;margin:.3rem 0 1.1rem;color:var(--cream);text-shadow:0 4px 60px rgba(0,0,0,.5)}
+.hero-tagline{font-family:var(--font-display);font-weight:400;font-size:clamp(1.05rem,2.7vw,1.6rem);color:var(--harvest);margin-bottom:.75rem}
+.hero-sub{font-size:clamp(.92rem,1.8vw,1.05rem);color:var(--cream-dim);margin-bottom:3rem}
+
+.countdown{display:flex;justify-content:center;gap:clamp(.6rem,3vw,2.1rem);margin-bottom:3rem;flex-wrap:wrap}
+.cd-unit{display:flex;flex-direction:column;align-items:center;min-width:clamp(58px,15vw,88px);padding:clamp(.75rem,2vw,1.15rem) clamp(.4rem,1.5vw,.9rem);border:1px solid var(--line);border-radius:2px;background:rgba(22,27,33,.42);backdrop-filter:blur(6px)}
+.cd-num{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,5vw,2.5rem);line-height:1;color:var(--cream);font-variant-numeric:tabular-nums}
+.cd-label{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-faint);margin-top:.55rem}
+.countdown.launched .cd-unit{display:none}
+.countdown.launched::after{content:'We are open.';font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2.2rem);color:var(--harvest)}
+
+.scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);width:1px;height:52px;background:linear-gradient(180deg,transparent,var(--cream-faint));animation:cue 2.6s ease-in-out infinite;z-index:1}
+@keyframes cue{0%,100%{opacity:.25;transform:translateX(-50%) scaleY(.55)}50%{opacity:.9;transform:translateX(-50%) scaleY(1)}}
+
+.section-brand{background:var(--dusk-deep)}
+.brand-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.brand-copy p{color:var(--cream-dim);margin-bottom:1.35rem;font-size:clamp(.98rem,1.7vw,1.08rem);max-width:56ch}
+.brand-pull{font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,2.5vw,1.42rem)!important;color:var(--cream)!important;line-height:1.42;border-left:2px solid var(--harvest);padding-left:1.4rem;margin-top:2.2rem}
+.brand-image{aspect-ratio:4/5;border-radius:2px}
+@media(max-width:860px){.brand-grid{grid-template-columns:1fr}.brand-image{aspect-ratio:16/11;order:-1}}
+
+.section-collection{background:var(--dusk)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(1.4rem,3vw,2.2rem)}
+.product-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:rgba(22,27,33,.34);transition:border-color .28s ease,transform .28s ease}
+.product-card:hover{border-color:rgba(199,91,29,.55);transform:translateY(-4px)}
+.product-img{aspect-ratio:4/5;border:none;border-bottom:1px solid var(--line)}
+.product-card h3{padding:1.35rem 1.35rem .4rem}
+.product-desc{padding:0 1.35rem;font-size:.9rem;color:var(--cream-dim);flex-grow:1}
+.product-status{padding:1.15rem 1.35rem 1.5rem;font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--harvest)}
+
+.section-gold{background:linear-gradient(160deg,var(--dusk-deep) 0%,#1E242C 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gold-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.gold-image{aspect-ratio:4/5;border-radius:2px}
+.gold-copy p{color:var(--cream-dim);margin-bottom:1.35rem;font-size:clamp(.98rem,1.7vw,1.08rem);max-width:56ch}
+.gold-highlight{font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,2.3vw,1.32rem)!important;line-height:1.46;color:var(--cream)!important;border-left:2px solid var(--harvest);padding-left:1.4rem;margin:2rem 0!important}
+.gold-copy .btn{margin-top:1rem}
+@media(max-width:860px){.gold-grid{grid-template-columns:1fr}.gold-image{aspect-ratio:16/11}}
+
+.section-notify{background:var(--dusk)}
+.notify-form{display:flex;gap:.7rem;max-width:520px;margin:0 auto;flex-wrap:wrap}
+.notify-form input[type=email]{flex:1 1 260px;padding:1.05rem 1.2rem;font-family:var(--font-body);font-size:.95rem;color:var(--cream);background:rgba(22,27,33,.6);border:1px solid var(--line);border-radius:2px;outline:none;transition:border-color .22s ease}
+.notify-form input[type=email]::placeholder{color:var(--cream-faint)}
+.notify-form input[type=email]:focus{border-color:var(--harvest)}
+.form-message{flex-basis:100%;font-size:.86rem;color:var(--harvest);min-height:1.3em;margin-top:.35rem}
+
+.site-footer{background:var(--dusk-deep);border-top:1px solid var(--line);padding:3.5rem 0 2.5rem}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:1.6rem;text-align:center}
+.footer-tag{font-size:.85rem;color:var(--cream-faint);margin-top:.5rem;letter-spacing:.04em}
+.footer-links{display:flex;gap:1.8rem;flex-wrap:wrap;justify-content:center}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);transition:color .22s ease}
+.footer-links a:hover{color:var(--harvest)}
+.footer-legal{font-size:.72rem;color:var(--cream-faint);letter-spacing:.05em}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="wordmark">ROOTED</a>
+    <nav class="nav">
+      <a href="#brand">The Brand</a>
+      <a href="#collection">Collection</a>
+      <a href="#gold">Gold Edition</a>
+      <a href="#notify" class="nav-cta">Notify Me</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg placeholder-img" aria-hidden="true">
+    <span class="ph-label">Hero Image<br><small>Golden hour. Barn. Real dirt.</small></span>
+  </div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Launching Soon</p>
+    <h1 class="hero-wordmark">ROOTED</h1>
+    <p class="hero-tagline">Rooted in the land. Raised on the work.</p>
+    <p class="hero-sub">Heritage apparel for the people who actually do it.</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-minutes">--</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-seconds">--</span><span class="cd-label">Seconds</span></div>
+    </div>
+    <a href="#notify" class="btn btn-primary">Get Notified at Launch</a>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section class="section section-brand" id="brand">
+  <div class="wrap brand-grid">
+    <div class="brand-copy">
+      <p class="eyebrow">What Is ROOTED</p>
+      <h2>This isn't a farm brand.<br>It's a dignity brand.</h2>
+      <p>There are millions of people who work the land — or whose families did, or whose families still do. They feed the country. They fix the fence. They get up before the sun and they don't ask for credit.</p>
+      <p>And almost nobody makes clothing that speaks to them without turning them into a costume.</p>
+      <p>ROOTED is for the woman who can fix a fence and still smells like cashmere. For the man who'd rather be in the barn than in a boardroom. For anyone who's tired of being treated like a punchline or a postcard.</p>
+      <p class="brand-pull">The people who do the work are the point. Not the equipment. Not the aesthetic. You.</p>
+    </div>
+    <div class="brand-image placeholder-img">
+      <span class="ph-label">Brand Image<br><small>Portrait — flannel, hoodie, barn light</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-collection" id="collection">
+  <div class="wrap">
+    <p class="eyebrow center">The First Drop</p>
+    <h2 class="center">The First Class Collection</h2>
+    <p class="section-sub center">One color, head to toe. Built to wear from the pasture to the terminal.</p>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-img placeholder-img"><span class="ph-label">Hoodie<br><small>Harvest Orange / Dusk Blue</small></span></div>
+        <h3>The Hoodie</h3>
+        <p class="product-desc">Heavyweight French terry. Extended hood that folds over your eyes. Seven pockets. Branded hardware.</p>
+        <p class="product-status">Details coming soon</p>
+      </article>
+      <article class="product-card">
+        <div class="product-img placeholder-img"><span class="ph-label">Sweatpant<br><small>Garment-dyed, tonal</small></span></div>
+        <h3>The Sweatpant</h3>
+        <p class="product-desc">Same weight. Same dye. Zippered pockets so nothing falls out on a plane. Flat-lock seams. Nothing rubs.</p>
+        <p class="product-status">Details coming soon</p>
+      </article>
+      <article class="product-card">
+        <div class="product-img placeholder-img"><span class="ph-label">Fanny Pack<br><small>Suede, tonal</small></span></div>
+        <h3>The Fanny Pack</h3>
+        <p class="product-desc">Suede. Worn at the waist or across the chest. Lined in contrast color. Hidden pocket against the body.</p>
+        <p class="product-status">Details coming soon</p>
+      </article>
+      <article class="product-card">
+        <div class="product-img placeholder-img"><span class="ph-label">The Set<br><small>Full tonal fit</small></span></div>
+        <h3>The Full Set</h3>
+        <p class="product-desc">Hoodie, sweatpant, and fanny pack in one color. The outfit you'd wear to fly first class or feed the horses.</p>
+        <p class="product-status">Details coming soon</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gold" id="gold">
+  <div class="wrap gold-grid">
+    <div class="gold-image placeholder-img">
+      <span class="ph-label">Gold Edition<br><small>Close-up — gold aglet, stamped mark</small></span>
+    </div>
+    <div class="gold-copy">
+      <p class="eyebrow">Limited. Numbered.</p>
+      <h2>The Gold Edition</h2>
+      <p>Fifty pieces per colorway. Solid gold aglets — the tips on the drawstrings — hand-stamped with the ROOTED mark. Each hoodie comes with a certificate listing the gold weight.</p>
+      <p class="gold-highlight">Wear it out. Send it back. We recover the gold, build you a new one, and ship it home. No charge. No registration. Whoever holds the garment holds the promise.</p>
+      <p>It doesn't matter if you bought it new, bought it secondhand, or were given it. The garment carries the warranty. A ROOTED Gold Edition never becomes trash.</p>
+      <a href="#notify" class="btn btn-outline">Request Access</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-notify" id="notify">
+  <div class="wrap narrow center">
+    <p class="eyebrow center">Be First</p>
+    <h2 class="center">Get notified when we open.</h2>
+    <p class="section-sub center">No spam. One email when the doors open, and nothing else.</p>
+    <form class="notify-form" id="notifyForm">
+      <input type="email" name="email" id="emailInput" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Notify Me</button>
+      <p class="form-message" id="formMessage" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark small">ROOTED</p>
+      <p class="footer-tag">Rooted in the land. Raised on the work.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+    <p class="footer-legal">&copy; <span id="year"></span> ROOTED. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const LAUNCH_DATE = new Date('2027-12-24T00:00:00');
+
+(function(){
+  const el=document.getElementById('countdown');
+  if(!el)return;
+  const d=document.getElementById('cd-days'),h=document.getElementById('cd-hours'),
+        m=document.getElementById('cd-minutes'),s=document.getElementById('cd-seconds');
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){
+    const diff=LAUNCH_DATE.getTime()-Date.now();
+    if(diff<=0){el.classList.add('launched');clearInterval(t);return;}
+    d.textContent=Math.floor(diff/86400000);
+    h.textContent=pad(Math.floor((diff%86400000)/3600000));
+    m.textContent=pad(Math.floor((diff%3600000)/60000));
+    s.textContent=pad(Math.floor((diff%60000)/1000));
+  }
+  tick();
+  const t=setInterval(tick,1000);
+})();
+
+(function(){
+  const form=document.getElementById('notifyForm'),msg=document.getElementById('formMessage');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.textContent='Thanks — you\u2019re on the list. (Form not yet connected to a mailing service.)';
+    form.reset();
+  });
+})();
+
+(function(){
+  const y=document.getElementById('year');
+  if(y)y.textContent=new Date().getFullYear();
+})();
+
+(function(){
+  const header=document.querySelector('.site-header');
+  if(!header)return;
+  function onScroll(){
+    header.style.background=window.scrollY>40?'rgba(22,27,33,.94)':'rgba(35,42,51,.82)';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
